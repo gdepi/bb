@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWO</title>
+</head>
+<body>
+   <h2>TWO 2</h2>
+</body>
+    <script>
+    window.onload=function(){
+        let key = 0;
+        const receiveMessage = (e) => {
+            console.log(e.data);
+            localStorage.setItem(key, e.data);
+            key++;
+        }
+    window.addEventListener('message', receiveMessage);
+}
+    </script>
+</html>
